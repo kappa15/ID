@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
     <title>Portfólio de Rodrigo Tomásio</title>
     <style>
         /* Estilo geral da página */
@@ -17,6 +18,8 @@
 
         /* Estilo do cabeçalho */
         header {
+            top:0;
+            position: relative;
             background-color: #333;
             color: #fff;
             padding: 20px;
@@ -92,6 +95,45 @@
             text-decoration: underline;
         }
 
+        .pop_ativo{
+            backdrop-filter: blur(10px) !important;
+            display: block !important;
+            color: white;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 1000;
+            position: fixed;
+            transition: all 0.5s;
+            margin: auto;
+        }
+
+        .pop_ativo p{
+            margin-top: 15%;
+            position: relative;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+        .analises{
+            cursor: pointer;
+        }
+
+        .analises p{
+            font-weight: bold;
+            pointer-events: none;
+        }
+
+        .desc{
+            display: none;
+        }
+
+        #popup{
+            backdrop-filter: blur(0px);
+            display: none;
+        }
+
         /* Tornando o layout responsivo */
         @media (max-width: 600px) {
             header nav ul li {
@@ -102,6 +144,7 @@
     </style>
 </head>
 <body>
+    <div id="popup"><h1></h1></div>
 
     <!-- Seção de Cabeçalho -->
     <header>
@@ -109,7 +152,7 @@
         <nav>
             <ul>
                 <li><a href="#sobre-mim">Sobre Mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#projetos">Análises</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -122,15 +165,37 @@
             <h2>Sobre Mim</h2>
             <p>Olá! Meu nome é Rodrigo, sou estudante do ISEC e apaixonado por surf. Tenho 20 anos e moro na encantadora Praia de Mira.</p>
         </section>
-
+        
         <!-- Seção de Projetos -->
         <section id="projetos">
             <h2>Análise</h2>
-            <ul>
-                <li><strong>Análise aula 1:</strong>kaapa</li>
-                <li><strong>Análise aula 2:</strong> aula 2</li>
-                <li><strong>Análise aula 3:</strong> aula3</li>
-            </ul>
+                <div class="analises"><div class="desc"><p><b>Análise</b>
+                    <br>Os conceitos básicos de sistemas digitais foram apresentados pelo professor na aula. 
+                    Ele começou explicando a diferença entre sinais analógicos e digitais. 
+                    Os sistemas de numeração binário, octal, decimal e hexadecimal foram introduzidos juntamente com maneiras de converter uns nos outros demonstrados. 
+                    <br>
+
+
+                    <br><b>Comentário</b>
+                    
+                    <br>O professor explicou bem os slides, o que facilitou o entendimento do conteúdo. 
+                        Explicou de modo claro as diferenças entre sinais analógicos e digitais e, com exemplos fáceis, ficou fácil visualizar o funcionamento do sistema de numeração binária, octal e hexadecimal decimal.
+                        As explicações são discorridas por meio do slide de maneira a reforçar slaid a slide e os pontos principais, o que facilitou o entendimento da lógica por trás dessas conversões de bases.
+                    
+                    <br>
+                    <br><b>Crítica</b>
+
+                    <br>A explicação da aula aconteceu de forma um pouco rápida, o que deixou algumas partes
+                    confusas no início. No entanto os exemplos e exercícios ajudaram a entender os conceitos no final.
+                    
+                    
+                    
+                    
+                                        
+                </p></div><p>Análise aula 1</p></div>
+                <div class="analises"><div class="desc"><p>Aula 1</p></div><p>Análise aula 2</p></div>
+                <div class="analises"><div class="desc"><p>Aula 1</p></div><p>Análise aula 3</p></div>
+
         </section>
 
         <!-- Seção de Contato -->
