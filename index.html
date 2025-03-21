@@ -4,87 +4,197 @@
     <meta charset='UTF-8'>
     <title>Portfolio de SO & IPM</title>
     <link href="style.css" rel="stylesheet">
+    <script defer src="script.js"></script>
 </head>
 <body>
 <header>
-    <h1> Portfolio de SO & IPM</h1>
+    <h1>Portfolio de SO & IPM</h1>
     <nav>
       <ul>
         <li><a href="#about">Sobre</a></li>
-        <li><a href="#projects">Análises de SO</a></li>
-        <li><a href="#projects1">Análise de IPM</a></li>
+        <li><a href="#" onclick="showSection('projects')">Análises de SO</a></li>
+        <li><a href="#" onclick="showSection('projects1')">Análises de IPM</a></li>
         <li><a href="#contact">Contactos</a></li>
       </ul>
     </nav>
-  </header>
-  
-  <!-- About Section -->
-  <section id="about">
+</header>
+
+<!-- Sobre -->
+<section id="about">
     <h2>Sobre</h2>
     <div class="content">
-      <img src="gato.jpg" alt="Rodrigo">
-      <p>Olá! O meu nome é Rodrigo, sou estudante do ISEC. Tenho 20 anos e moro na Praia de Mira.</p>
+        <img src="gato.jpg" alt="Rodrigo">
+        <p>Olá! O meu nome é Rodrigo, sou estudante do ISEC. Tenho 20 anos e moro na Praia de Mira.</p>
     </div>
-  </section>
-  
-  <!-- Analises De SO -->
-  <section id="projects">
+</section>
+
+<!-- Lista de Análises de SO -->
+<section id="projects">
     <h2>Análises de SO</h2>
     <div class="project">
-      <h3>Aula 1</h3>
-      <p>Dia 21/02/2025 <a href="#">Análise...</a></p>
+        <h3>Aula 1</h3>
+        <p>Dia 21/02/2025 <a href="#" onclick="openAnalysis('aula1')">Análise...</a></p>
     </div>
     <div class="project">
-      <h3>Aula 2</h3>
-      <p>Dia 28/02/2025 <a href="#">Análise...</a></p>
+        <h3>Aula 2</h3>
+        <p>Dia 28/02/2025 <a href="#" onclick="openAnalysis('aula2')">Análise...</a></p>
     </div>
     <div class="project">
         <h3>Aula 3</h3>
-        <p>Dia 07/03/2025 <a href="#">Análise...</a></p>
+        <p>Dia 07/03/2025 <a href="#" onclick="openAnalysis('aula3')">Análise...</a></p>
     </div>
     <div class="project">
         <h3>Aula 4</h3>
-        <p>Dia 14/03/2025 <a href="#">Análise...</a></p>
+        <p>Dia 14/03/2025 <a href="#" onclick="openAnalysis('aula4')">Análise...</a></p>
     </div>
     <div class="project">
         <h3>Aula 5</h3>
-        <p>Dia 21/03/2025 <a href="#">Análise...</a></p>
+        <p>Dia 21/03/2025 <a href="#" onclick="openAnalysis('aula5')">Análise...</a></p>
     </div>
-  </section>
+</section>
 
-    <!-- Analises De IPM -->
-
-  <section id="projects1">
+<!-- Lista de Análises de IPM -->
+<section id="projects1">
     <h2>Análises de IPM</h2>
     <div class="project">
         <h3>Aula 1</h3>
-        <p>Dia 21/02/2025 <a href="#">Análise...</a></p>
-      </div>
-      <div class="project">
+        <p>Dia 21/02/2025 <a href="#" onclick="openAnalysis('ipm1')">Análise...</a></p>
+    </div>
+    <div class="project">
         <h3>Aula 2</h3>
-        <p>Dia 28/02/2025 <a href="#">Análise...</a></p>
-      </div>
-      <div class="project">
-          <h3>Aula 3</h3>
-          <p>Dia 07/03/2025 <a href="#">Análise...</a></p>
-      </div>
-      <div class="project">
-          <h3>Aula 4</h3>
-          <p>Dia 14/03/2025 <a href="#">Análise...</a></p>
-      </div>
-      <div class="project">
-          <h3>Aula 5</h3>
-          <p>Dia 21/03/2025 <a href="#">Análise...</a></p>
-      </div>
+        <p>Dia 28/02/2025 <a href="#" onclick="openAnalysis('ipm2')">Análise...</a></p>
+    </div>
+    <div class="project">
+        <h3>Aula 3</h3>
+        <p>Dia 07/03/2025 <a href="#" onclick="openAnalysis('ipm3')">Análise...</a></p>
+    </div>
+    <div class="project">
+        <h3>Aula 4</h3>
+        <p>Dia 14/03/2025 <a href="#" onclick="openAnalysis('ipm4')">Análise...</a></p>
+    </div>
+    <div class="project">
+        <h3>Aula 5</h3>
+        <p>Dia 21/03/2025 <a href="#" onclick="openAnalysis('ipm5')">Análise...</a></p>
+    </div>
+</section>
+
+<!-- Análises Individuais SO -->
+<section id="aula1" class="analysis">
+    <h2>SO - Aula 1</h2>
+    <h3>Análise</h3>
+    <p>Aqui vai ser uma analise</p>
+    <h3>Comentário</h3>
+    <p>Auqi vai ser um comentario</p>
+    <h3>Critica</h3>
+    <p>Aqui vai ser uma critica</p>
+    <br><button onclick="goBack()">Voltar</button>
+</section>
+
+<section id="aula2" class="analysis">
+    <h2>SO - Aula 2</h2>
+    <h3>Análise</h3>
+    <p>Aqui vai ser uma analise</p>
+    <h3>Comentário</h3>
+    <p>Auqi vai ser um comentario</p>
+    <h3>Critica</h3>
+    <p>Aqui vai ser uma critica</p>
+    <br><button onclick="goBack()">Voltar</button>
+</section>
+
+<section id="aula3" class="analysis">
+    <h2>SO - Aula 3</h2>
+    <h3>Análise</h3>
+    <p>Aqui vai ser uma analise</p>
+    <h3>Comentário</h3>
+    <p>Auqi vai ser um comentario</p>
+    <h3>Critica</h3>
+    <p>Aqui vai ser uma critica</p>
+    <br><button onclick="goBack()">Voltar</button>
+</section>
+
+<section id="aula4" class="analysis">
+    <h2>SO - Aula 4</h2>
+    <h3>Análise</h3>
+    <p>Aqui vai ser uma analise</p>
+    <h3>Comentário</h3>
+    <p>Auqi vai ser um comentario</p>
+    <h3>Critica</h3>
+    <p>Aqui vai ser uma critica</p>
+    <br><button onclick="goBack()">Voltar</button>
   </section>
-  
-  
-  
-  <!-- Contactos -->
-  <footer id="contact">
+
+<section id="aula5" class="analysis">
+    <h2>SO - Aula 5</h2>
+    <h3>Análise</h3>
+    <p>Aqui vai ser uma analise</p>
+    <h3>Comentário</h3>
+    <p>Auqi vai ser um comentario</p>
+    <h3>Critica</h3>
+    <p>Aqui vai ser uma critica</p>
+    <br><button onclick="goBack()">Voltar</button>
+</section>
+
+<!-- Análises Individuais IPM -->
+<section id="ipm1" class="analysis">
+    <h2>IPM - Aula 1</h2>
+    <h3>Análise</h3>
+    <p>Aqui vai ser uma analise</p>
+    <h3>Comentário</h3>
+    <p>Auqi vai ser um comentario</p>
+    <h3>Critica</h3>
+    <p>Aqui vai ser uma critica</p>
+    <br><button onclick="goBack()">Voltar</button>
+</section>
+
+<section id="ipm2" class="analysis">
+    <h2>IPM - Aula 2</h2>
+    <h3>Análise</h3>
+    <p>Aqui vai ser uma analise</p>
+    <h3>Comentário</h3>
+    <p>Auqi vai ser um comentario</p>
+    <h3>Critica</h3>
+    <p>Aqui vai ser uma critica</p>
+    <br><button onclick="goBack()">Voltar</button>
+</section>
+
+<section id="ipm3" class="analysis">
+    <h2>IPM - Aula 3</h2>
+    <h3>Análise</h3>
+    <p>Aqui vai ser uma analise</p>
+    <h3>Comentário</h3>
+    <p>Auqi vai ser um comentario</p>
+    <h3>Critica</h3>
+    <p>Aqui vai ser uma critica</p>
+    <br><button onclick="goBack()">Voltar</button>
+</section>
+
+<section id="ipm4" class="analysis">
+    <h2>IPM - Aula 4</h2>
+    <h3>Análise</h3>
+    <p>Aqui vai ser uma analise</p>
+    <h3>Comentário</h3>
+    <p>Auqi vai ser um comentario</p>
+    <h3>Critica</h3>
+    <p>Aqui vai ser uma critica</p>
+    <br><button onclick="goBack()">Voltar</button>
+</section>
+
+<section id="ipm5" class="analysis">
+    <h2>IPM - Aula 5</h2>
+    <h3>Análise</h3>
+    <p>Aqui vai ser uma analise</p>
+    <h3>Comentário</h3>
+    <p>Auqi vai ser um comentario</p>
+    <h3>Critica</h3>
+    <p>Aqui vai ser uma critica</p>
+    <br><button onclick="goBack()">Voltar</button>
+</section>
+
+<!-- Contactos -->
+<footer id="contact">
     <h2>Contactos</h2>
     <p>Email: a2024125328@isec.pt</p>
     <p>&copy; Rodrigo Tomásio Portfolio</p>
-  </footer>
+</footer>
 </body>
 </html>
