@@ -1,372 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang='pt'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>Portfólio de Rodrigo Tomásio</title>
-    <style>
-        /* Estilo geral da página */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* Fundo neutro claro */
-            color: #333;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        /* Estilo do cabeçalho */
-        header {
-            top:0;
-            position: relative;
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        header nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Layout geral */
-        main {
-            padding: 20px;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-
-        /* Estilo das seções */
-        section {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        section h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style-type: square;
-            margin-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        /* Estilo do rodapé */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-            margin-top: 20px;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .pop_ativo{
-            backdrop-filter: blur(10px) !important;
-            display: block !important;
-            color: white;
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            z-index: 1000;
-            position: fixed;
-            transition: all 0.5s;
-            margin: auto;
-        }
-
-        .pop_ativo p{
-            margin-top: 7%;
-            position: relative;
-            margin-left: 25%;
-            margin-right: 25%;
-        }
-
-        .analises{
-            cursor: pointer;
-        }
-
-        .analises p{
-            font-weight: bold;
-            pointer-events: none;
-        }
-
-        .desc{
-            display: none;
-        }
-
-        #popup{
-            backdrop-filter: blur(0px);
-            display: none;
-        }
-
-        .sair{
-            position: absolute !important;
-            bottom: 0;
-            margin-left: 49% !important;
-            margin-bottom: 5% !important;
-            cursor:pointer;
-            pointer-events: all !important;
-            font-weight: bold;
-        }
-
-
-        /* Tornando o layout responsivo */
-        @media (max-width: 600px) {
-            header nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-    </style>
+    <meta charset='UTF-8'>
+    <title>Portfolio de SO & IPM</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="popup"><h1></h1></div>
+<header>
+    <h1> Portfolio de SO & IPM</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#projects">Análises de SO</a></li>
+        <li><a href="#projects1">Análise de IPM</a></li>
+        <li><a href="#contact">Contactos</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- About Section -->
+  <section id="about">
+    <h2>Sobre</h2>
+    <div class="content">
+      <img src="gato.jpg" alt="Rodrigo">
+      <p>Olá! O meu nome é Rodrigo, sou estudante do ISEC. Tenho 20 anos e moro na Praia de Mira.</p>
+    </div>
+  </section>
+  
+  <!-- Analises De SO -->
+  <section id="projects">
+    <h2>Análises de SO</h2>
+    <div class="project">
+      <h3>Aula 1</h3>
+      <p>Dia 21/02/2025 <a href="#">Análise...</a></p>
+    </div>
+    <div class="project">
+      <h3>Aula 2</h3>
+      <p>Dia 28/02/2025 <a href="#">Análise...</a></p>
+    </div>
+    <div class="project">
+        <h3>Aula 3</h3>
+        <p>Dia 07/03/2025 <a href="#">Análise...</a></p>
+    </div>
+    <div class="project">
+        <h3>Aula 4</h3>
+        <p>Dia 14/03/2025 <a href="#">Análise...</a></p>
+    </div>
+    <div class="project">
+        <h3>Aula 5</h3>
+        <p>Dia 21/03/2025 <a href="#">Análise...</a></p>
+    </div>
+  </section>
 
-    <!-- Seção de Cabeçalho -->
-    <header>
-        <h1>Portfólio Digital</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre-mim">Sobre Mim</a></li>
-                <li><a href="#projetos">Análises</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Analises De IPM -->
 
-    <!-- Conteúdo principal -->
-    <main>
-        <!-- Seção Sobre Mim -->
-        <section id="sobre-mim">
-            <h2>Sobre Mim</h2>
-            <p>Olá! O meu nome é Rodrigo, sou estudante do ISEC. Tenho 20 anos e moro na Praia de Mira.</p>
-        </section>
-        
-        <!-- Seção de Projetos -->
-        <section id="projetos">
-            <h2>Análise</h2>
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>Os conceitos básicos de sistemas digitais foram apresentados pelo professor na aula. 
-                    Ele começou por explicar a diferença entre sinais analógicos e digitais. 
-                    Os sistemas de numeração binário, octal, decimal e hexadecimal foram introduzidos juntamente com maneiras de converter uns nos outros. 
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>O professor explicou bem os slides, o que facilitou o entendimento do conteúdo. 
-                        Explicou de modo claro as diferenças entre sinais analógicos e digitais e, com exemplos simples, ficou fácil visualizar o funcionamento do sistema de numeração binária, octal e hexadecimal decimal.
-                        As explicações são realizadas através de PowerPoint de maneira a reforçar, slide a slide, os pontos principais, facilitando o entendimento da lógica por trás dessas conversões de bases.                  
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>A explicação da aula aconteceu de forma repentina, o que deixou algumas partes
-                    confusas no início. No entanto, no final, os conceitos foram compreendidos através de exemplos e exercícios.                                       
-                </p></div><p>Dia 11/10/2024 Aula 1</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br> 
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica                                       
-                </p></div><p>Dia 18/10/2024 Aula 2</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica                                       
-                </p></div><p>Dia 25/10/2024 Aula 3</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica                                       
-                </p></div><p>Dia 08/11/2024 Aula 4</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica                                       
-                </p></div><p>Dia 15/11/2024 Aula 5</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica                                       
-                </p></div><p>Dia 22/11/2024 Aula 6</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica                                       
-                </p></div><p>Dia 29/11/2024 Aula 7</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica                                       
-                </p></div><p>Dia 06/12/2024 Aula 8</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica                                       
-                </p></div><p>Dia 13/12/2024 Aula 9</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica                                       
-                </p></div><p>Dia 20/12/2024 Aula 10</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica                                       
-                </p></div><p>Dia 10/01/2025 Aula 11</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica                                       
-                </p></div><p>Dia 17/01/2025 Aula 12</p></div>
-
-                <div class="analises"><div class="desc"><p class="sair">Sair</p><p><b>Análise</b>
-                    <br>
-                        Análise
-                    <br>
-                    <br><b>Comentário</b>                   
-                    <br>
-                        Comentário
-                    <br>
-                    <br><b>Crítica</b>
-                    <br>
-                        Crítica 
-                        Ultima aula apresentação                                      
-                </p></div><p>Dia 24/01/2025 Aula 13</p></div>
-                
-                
-
-        </section>
-
-        <!-- Seção de Contato -->
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Pode entrar em contato comigo através do e-mail: <a href="mailto:a2024125328@isec.pt">a2024125328@isec.pt</a></p>
-        </section>
-    </main>
-
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2024 Rodrigo Tomásio - Todos os direitos reservados.</p>
-    </footer>
-
+  <section id="projects1">
+    <h2>Análises de IPM</h2>
+    <div class="project">
+        <h3>Aula 1</h3>
+        <p>Dia 21/02/2025 <a href="#">Análise...</a></p>
+      </div>
+      <div class="project">
+        <h3>Aula 2</h3>
+        <p>Dia 28/02/2025 <a href="#">Análise...</a></p>
+      </div>
+      <div class="project">
+          <h3>Aula 3</h3>
+          <p>Dia 07/03/2025 <a href="#">Análise...</a></p>
+      </div>
+      <div class="project">
+          <h3>Aula 4</h3>
+          <p>Dia 14/03/2025 <a href="#">Análise...</a></p>
+      </div>
+      <div class="project">
+          <h3>Aula 5</h3>
+          <p>Dia 21/03/2025 <a href="#">Análise...</a></p>
+      </div>
+  </section>
+  
+  
+  
+  <!-- Contactos -->
+  <footer id="contact">
+    <h2>Contactos</h2>
+    <p>Email: a2024125328@isec.pt</p>
+    <p>&copy; Rodrigo Tomásio Portfolio</p>
+  </footer>
 </body>
 </html>
