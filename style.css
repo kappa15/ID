@@ -16,29 +16,16 @@ header {
   background: linear-gradient(to right, #a8d8ea, #f7a1a1);
   padding: 10px;
   border-bottom: 3px solid #333;
+  height: 100px;
 }
 
 header h1 {
   font-size: 2em;
   color: #333;
   margin-bottom: 10px;
+  margin-top: 17px;
 }
 
-nav ul {
-  list-style: none;
-  display: inline-flex;
-  gap: 15px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #0000ee;
-  font-size: 1.2em;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
 
 section {
   margin: 20px auto;
