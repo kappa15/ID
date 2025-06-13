@@ -7,10 +7,34 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-<header>
-    <h1>Portfolio de SO & IPM</h1>
-</header>
+<!-- Adiciona este botão logo após a tag <body> ou dentro do header -->
+<button id="toggleTheme" style="position:fixed;top:18px;right:18px;z-index:1000;background:#ffd966;color:#183153;border:2px solid #b3c7e6;padding:0.5em 1em;font-family:'Courier New',Courier,monospace;cursor:pointer;">🌙 Modo Escuro</button>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('toggleTheme');
+  btn.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    if(document.body.classList.contains('dark-mode')) {
+      btn.textContent = '☀️ Modo Claro';
+    } else {
+      btn.textContent = '🌙 Modo Escuro';
+    }
+  });
+});
+</script>
+<header>
+    <h1> Portfolio de SO & IPM</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">SO</a></li>
+            <li><a href="#projects1">IPM</a></li>
+            <li><a href="#contact">Contactos</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
 <!-- Sobre -->
 <section id="about">
     <h2>Sobre</h2>
@@ -23,59 +47,63 @@
 <!-- Lista de Análises de SO -->
 <section id="projects">
     <h2>Análises de SO</h2>
-    <div class="project">
-        <h3>Aula 1</h3>
-        <p>Dia 21/02/2025 <a href="#" onclick="openAnalysis('aula1')">Análise...</a></p>
-    </div>
-    <div class="project">
-        <h3>Aula 2</h3>
-        <p>Dia 28/02/2025 <a href="#" onclick="openAnalysis('aula2')">Análise...</a></p>
-    </div>
-    <div class="project">
-        <h3>Aula 3</h3>
-        <p>Dia 07/03/2025 <a href="#" onclick="openAnalysis('aula3')">Análise...</a></p>
-    </div>
-    <div class="project">
-        <h3>Aula 4</h3>
-        <p>Dia 14/03/2025 <a href="#" onclick="openAnalysis('aula4')">Análise...</a></p>
-    </div>
-    <div class="project">
-        <h3>Aula 5</h3>
-        <p>Dia 21/03/2025 <a href="#" onclick="openAnalysis('aula5')">Análise...</a></p>
-    </div>
-    <div class="project">
-        <h3>Aula 6</h3>
-        <p>Dia 28/03/2025 <a href="#" onclick="openAnalysis('aula6')">Análise...</a></p>
-    </div>
-    <div class="project">
-        <h3>Aula 7</h3>
-        <p>Dia 04/04/2025 <a href="#" onclick="openAnalysis('aula7')">Análise...</a></p>
-    </div>
-    <div class="project">
-        <h3>Aula 8</h3>
-        <p>Dia 02/05/2025 <a href="#" onclick="openAnalysis('aula8')">Análise...</a></p>
-    </div>
-    <div class="project">
-        <h3>Aula 9</h3>
-        <p>Dia 09/05/2025 <a href="#" onclick="openAnalysis('aula9')">Análise...</a></p>
-    </div>
-    <div class="project">
-        <h3>Aula 10</h3>
-        <p>Dia 16/05/2025 <a href="#" onclick="openAnalysis('aula10')">Análise...</a></p>
-    </div>
-    <div class="project">
-        <h3>Aula 11</h3>
-        <p>Dia 23/05/2025 <a href="#" onclick="openAnalysis('aula11')">Análise...</a></p>
-    </div>
-     <div class="project">
-        <h3>Aula 12</h3>
-        <p>Dia 04/06/2025 <a href="#" onclick="openAnalysis('aula12')">Análise...</a></p>
-    </div>
-     <div class="project">
-        <h3>Aula 13</h3>
-        <p>Dia 13/06/2025 <a href="#" onclick="openAnalysis('aula13')">Análise...</a></p>
-    </div>
+    <div class="content">
+        <div>
+            <div class="project">
+                <h3>Aula 1</h3>
+                <p>Dia 21/02/2025 <a href="#" onclick="openAnalysis('aula1')">Análise...</a></p>
+            </div>
+            <div class="project">
+                <h3>Aula 2</h3>
+                <p>Dia 28/02/2025 <a href="#" onclick="openAnalysis('aula2')">Análise...</a></p>
+            </div>
+            <div class="project">
+                <h3>Aula 3</h3>
+                <p>Dia 07/03/2025 <a href="#" onclick="openAnalysis('aula3')">Análise...</a></p>
+            </div>
+            <div class="project">
+                <h3>Aula 4</h3>
+                <p>Dia 14/03/2025 <a href="#" onclick="openAnalysis('aula4')">Análise...</a></p>
+            </div>
+            <div class="project">
+                <h3>Aula 5</h3>
+                <p>Dia 21/03/2025 <a href="#" onclick="openAnalysis('aula5')">Análise...</a></p>
+            </div>
+            <div class="project">
+                <h3>Aula 6</h3>
+                <p>Dia 28/03/2025 <a href="#" onclick="openAnalysis('aula6')">Análise...</a></p>
+            </div>
+            <div class="project">
+                <h3>Aula 7</h3>
+                <p>Dia 04/04/2025 <a href="#" onclick="openAnalysis('aula7')">Análise...</a></p>
+            </div>
+            <div class="project">
+                <h3>Aula 8</h3>
+                <p>Dia 02/05/2025 <a href="#" onclick="openAnalysis('aula8')">Análise...</a></p>
+            </div>
+            <div class="project">
+                <h3>Aula 9</h3>
+                <p>Dia 09/05/2025 <a href="#" onclick="openAnalysis('aula9')">Análise...</a></p>
+            </div>
+            <div class="project">
+                <h3>Aula 10</h3>
+                <p>Dia 16/05/2025 <a href="#" onclick="openAnalysis('aula10')">Análise...</a></p>
+            </div>
+            <div class="project">
+                <h3>Aula 11</h3>
+                <p>Dia 23/05/2025 <a href="#" onclick="openAnalysis('aula11')">Análise...</a></p>
+            </div>
+             <div class="project">
+                <h3>Aula 12</h3>
+                <p>Dia 04/06/2025 <a href="#" onclick="openAnalysis('aula12')">Análise...</a></p>
+            </div>
+             <div class="project">
+                <h3>Aula 13</h3>
+                <p>Dia 13/06/2025 <a href="#" onclick="openAnalysis('aula13')">Análise...</a></p>
+            </div>
 
+        </div>
+    </div>
 </section>
 
 <!-- Lista de Análises de IPM -->
@@ -439,12 +467,14 @@
     <p>Aqui vai ser uma critica</p>
     <br><button onclick="goBack()">Voltar</button>
 </section>
-
+</main>
 <!-- Contactos -->
 <footer id="contact">
-    <h2>Contactos</h2>
-    <p>Email: a2024125328@isec.pt</p>
-    <p>&copy; Rodrigo Tomásio Portfolio</p>
+    <p><span style="font-weight:bold; color:#ffd966;">📧 Contacto:</span>
+        <a href="mailto:a2024125328@isec.pt">a2024125328@isec.pt</a>
+    </p>
+    <p>💾 &copy; Rodrigo Tomásio Portfolio</p>
+    <p>✨ Este portefólio foi inspirado no visual dos anos 90. 🖱️</p>
 </footer>
 </body>
 </html>

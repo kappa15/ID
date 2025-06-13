@@ -4,6 +4,9 @@ function openAnalysis(id) {
     document.querySelectorAll('.analysis').forEach(sec => sec.style.display = 'none');
     document.getElementById(id).style.display = 'block';
     document.getElementById('contact').classList.add('fixed');
+    document.querySelectorAll('.analysis').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({ top: document.getElementById(id).offsetTop - 60, behavior: 'smooth' });
 }
 
 function goBack() {
@@ -11,8 +14,8 @@ function goBack() {
     document.getElementById('projects').style.display = 'block';
     document.getElementById('projects1').style.display = 'block';
     document.getElementById('contact').classList.remove('fixed');
-
-
+    document.querySelectorAll('.analysis').forEach(sec => sec.classList.remove('active'));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function showSection(sectionId) {
