@@ -7,6 +7,7 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+<div id="progressBar" style="position:fixed;top:0;left:0;height:6px;background:#ffd966;width:0;z-index:99999;transition:width 0.2s;"></div>
 <!-- Adiciona este botão logo após a tag <body> ou dentro do header -->
 <button id="toggleTheme" style="position:fixed;top:18px;right:18px;z-index:1000;background:#ffd966;color:#183153;border:2px solid #b3c7e6;padding:0.5em 1em;font-family:'Courier New',Courier,monospace;cursor:pointer;">🌙 Modo Escuro</button>
 
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(document.body.classList.contains('dark-mode')) {
       btn.textContent = '☀️ Modo Claro';
     } else {
-      btn.textContent = '🌙 Modo Escuro';
+      btn.textContent = '🌑 Modo Escuro';
     }
   });
 });
@@ -476,5 +477,24 @@ document.addEventListener('DOMContentLoaded', function() {
     <p>💾 &copy; Rodrigo Tomásio Portfolio</p>
     <p>✨ Este portefólio foi inspirado no visual dos anos 90. 🖱️</p>
 </footer>
+<button id="backToTop" title="Voltar ao topo">⬆️</button>
+<script>
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 200) {
+    backToTop.style.display = 'block';
+  } else {
+    backToTop.style.display = 'none';
+  }
+});
+backToTop.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
+</script>
+<script>
+window.addEventListener('scroll', function() {
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = (window.scrollY / docHeight) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
 </body>
 </html>

@@ -346,3 +346,38 @@ body.dark-mode * {
   scrollbar-color: #ffe066 #3a4a7c;
 }
 
+#backToTop {
+  display: none;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: #ffd966;
+  color: #183153;
+  border: 3px outset #4f709c;
+  font-size: 2em;
+  padding: 0.2em 0.5em;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 #b3c7e6;
+  cursor: pointer;
+  z-index: 9999;
+  font-family: 'Courier New', Courier, monospace;
+  transition: transform 0.2s, background 0.2s;
+}
+#backToTop:hover {
+  background: #4f709c;
+  color: #ffd966;
+  border: 3px inset #ffd966;
+  transform: scale(1.15) rotate(-6deg);
+}
+
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6px;
+  background: #ffd966;
+  width: 0;
+  z-index: 99999;
+  transition: width 0.2s;
+}
+
