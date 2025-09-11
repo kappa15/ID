@@ -1,340 +1,51 @@
 <!DOCTYPE html>
-<html lang='pt'>
+<html lang="pt">
 <head>
-    <meta charset='UTF-8'>
-    <title>Portfolio de SO & IPM</title>
-    <link href="style.css" rel="stylesheet">
-    <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <title>Portfólio da Disciplina</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="progressBar" style="position:fixed;top:0;left:0;height:6px;background:#ffd966;width:0;z-index:99999;transition:width 0.2s;"></div>
-<!-- Adiciona este botão logo após a tag <body> ou dentro do header -->
-<button id="toggleTheme" style="position:fixed;top:18px;right:18px;z-index:1000;background:#ffd966;color:#183153;border:2px solid #b3c7e6;padding:0.5em 1em;font-family:'Courier New',Courier,monospace;cursor:pointer;">🌙 Modo Escuro</button>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const btn = document.getElementById('toggleTheme');
-  btn.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    if(document.body.classList.contains('dark-mode')) {
-      btn.textContent = '☀️ Modo Claro';
-    } else {
-      btn.textContent = '🌑 Modo Escuro';
-    }
-  });
-});
-</script>
-<header>
-    <h1> Portfolio de SO & IPM</h1>
-    <nav>
-        <ul>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#projects">SO</a></li>
-            <li><a href="#projects1">IPM</a></li>
-            <li><a href="#contact">Contactos</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-<!-- Sobre -->
-<section id="about">
-    <h2>Sobre</h2>
-    <div class="content">
-        <img src="gato.jpg" alt="Rodrigo">
-        <p>Olá! O meu nome é Rodrigo, sou estudante do ISEC. Tenho 20 anos e moro na Praia de Mira.</p>
-    </div>
-</section>
-
-<!-- Lista de Análises de SO -->
-<section id="projects">
-    <h2>Análises de SO</h2>
-    <div class="content">
-        <div>
-            <div class="project">
+    <button id="toggleTheme">🌑 Modo Escuro</button>
+    <header>
+        <h1>Portfólio de [Nome da Disciplina]</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#analises">Análises</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <div class="content">
+                <img src="gato.jpg" alt="Foto do aluno">
+                <p>Olá! Sou [teu nome], estudante de [curso] no [instituto]. Este portfólio reúne as análises e reflexões desenvolvidas na disciplina de [nome da disciplina].</p>
+            </div>
+        </section>
+        <section id="analises">
+            <h2>Análises</h2>
+            <div class="analysis">
                 <h3>Aula 1</h3>
-                <p>Dia 21/02/2025 <a href="#" onclick="openAnalysis('aula1')">Análise...</a></p>
+                <p>Resumo e reflexão sobre a aula.</p>
             </div>
-            <div class="project">
+            <div class="analysis">
                 <h3>Aula 2</h3>
-                <p>Dia 28/02/2025 <a href="#" onclick="openAnalysis('aula2')">Análise...</a></p>
+                <p>Resumo e reflexão sobre a aula.</p>
             </div>
-            <div class="project">
-                <h3>Aula 3</h3>
-                <p>Dia 07/03/2025 <a href="#" onclick="openAnalysis('aula3')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 4</h3>
-                <p>Dia 14/03/2025 <a href="#" onclick="openAnalysis('aula4')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 5</h3>
-                <p>Dia 21/03/2025 <a href="#" onclick="openAnalysis('aula5')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 6</h3>
-                <p>Dia 28/03/2025 <a href="#" onclick="openAnalysis('aula6')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 7</h3>
-                <p>Dia 04/04/2025 <a href="#" onclick="openAnalysis('aula7')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 8</h3>
-                <p>Dia 02/05/2025 <a href="#" onclick="openAnalysis('aula8')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 9</h3>
-                <p>Dia 09/05/2025 <a href="#" onclick="openAnalysis('aula9')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 10</h3>
-                <p>Dia 16/05/2025 <a href="#" onclick="openAnalysis('aula10')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 11</h3>
-                <p>Dia 23/05/2025 <a href="#" onclick="openAnalysis('aula11')">Análise...</a></p>
-            </div>
-             <div class="project">
-                <h3>Aula 12</h3>
-                <p>Dia 04/06/2025 <a href="#" onclick="openAnalysis('aula12')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 13</h3>
-                <p>Dia 13/06/2025 <a href="#" onclick="openAnalysis('aula13')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 14</h3>
-                <p>Dia 16/06/2025 <a href="#" onclick="openAnalysis('aula14')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 15</h3>
-                <p>Dia 17/06/2025 <a href="#" onclick="openAnalysis('aula15')">Análise...</a></p>
-            </div>
-            <div class="project">
-                <h3>Aula 16</h3>
-                <p>Dia 18/06/2025 <a href="#" onclick="openAnalysis('aula16')">Análise...</a></p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- Análises Individuais SO -->
-<section id="aula1" class="analysis">
-    <h2>SO - Aula 1</h2>
-    <h3>Análise</h3>
-    <p> A primeira aula apresentou os temas do semestre e a avaliação contínua, que inclui trabalhos em aula (20%), portfólio digital (40%) e projeto final individual (40%).
-        O Trabalho Prático 1, focado em conceitos essenciais dos sistemas operativos, como funções, gestão de recursos e comparação entre sistemas (Windows, Linux, MacOS),
-        foi iniciado logo a seguir.</p>
-    <h3>Comentário</h3>
-    <p> A combinação de teoria com prática foi eficaz, permitindo que os alunos aplicassem os conceitos desde o início.
-        A divisão em grupos incentivou a troca de ideias e colaboração.</p>
-    <h3>Critica</h3>
-    <p> Embora a aula tenha sido bem estruturada, poderia ter incluído uma demonstração prática ou visual dos sistemas operativos abordados, tornando o conteúdo mais acessível.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula2" class="analysis">
-    <h2>SO - Aula 2</h2>
-    <h3>Análise</h3>
-    <p> Nesta segunda aula, os grupos apresentaram o primeiro trabalho prático, o que ajudou a reforçar conceitos importantes como a gestão de memória, multitarefa e as diferenças entre sistemas operativos.
-        Depois, foi lançado o segundo trabalho, que envolve instalar e configurar diferentes distribuições Linux, o que permitirá uma comparação prática entre elas.</p>
-    <h3>Comentário</h3>
-    <p>Foi uma sessão produtiva e dinâmica. As apresentações permitiram consolidar o que já foi aprendido, e o novo trabalho vai dar oportunidade de aplicar os conhecimentos de forma prática.</p>
-    <h3>Critica</h3>
-    <p> A aula foi bem organizada e manteve uma boa ligação com os conteúdos anteriores. No entanto, teria sido útil uma breve explicação inicial sobre as distribuições Linux, para apoiar melhor os grupos com menos experiência.
-        Algumas apresentações também podiam ter sido mais equilibradas em termos de conteúdo</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula3" class="analysis">
-    <h2>SO - Aula 3</h2>
-    <h3>Análise</h3>
-    <p> Nesta aula, o professor explicou os conceitos-base dos sistemas operativos — como eles ajudam a correr aplicações, gerem os recursos do computador e garantem segurança. Também se falou sobre como os SOs criam um ambiente independente do hardware e sobre as interfaces, incluindo as chamadas de sistema.
-        Depois da parte teórica, começou o Trabalho Prático 2: cada grupo escolheu uma distribuição Linux para instalar numa máquina virtual, configurar, tirar capturas de ecrã e instalar um programa útil.</p>
-    <h3>Comentário</h3>
-    <p> Esta sessão ajudou a perceber melhor a teoria e deu início a um trabalho prático que vai permitir ver, na prática, como funcionam diferentes distribuições Linux.
-        Foi uma aula útil, mais dinâmica, e que nos deixou mais preparados para trabalhar com sistemas operativos reais.</p>
-    <h3>Critica</h3>
-    <p>A aula correu bem e ligou bem a teoria com a prática. Também teria sido bom dar uma ideia do que se espera no manual técnico.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula4" class="analysis">
-    <h2>SO - Aula 4</h2>
-    <h3>Análise</h3>
-    <p> Nesta aula, os grupos apresentaram os manuais de instalação das distribuições Linux que trabalharam. Cada grupo mostrou como fez a instalação numa máquina virtual, o que permitiu comparar os diferentes sistemas. No caso do grupo, foi apresentado o processo com Arch Linux, desde a criação da pendrive até à instalação do sistema e de uma aplicação (Google Chrome).
-        Outros grupos trouxeram distribuições como Ubuntu, Fedora e Debian, o que ajudou a ver bem as diferenças e semelhanças entre elas.</p>
-    <h3>Comentário</h3>
-    <p> Foi uma aula muito produtiva. Ver os vários sistemas em funcionamento ajudou a perceber melhor como funcionam na prática e quais são mais simples ou mais avançados.
-        O trabalho com o Arch Linux, por exemplo, mostrou um processo mais técnico, o que trouxe um desafio interessante. No geral, foi uma boa forma de aplicar o que aprendemos nas aulas anteriores.</p>
-    <h3>Critica</h3>
-    <p>A sessão foi bastante útil e prática, mas algumas apresentações podiam ter sido mais claras ou ter incluído pequenas demonstrações, como a navegação no sistema depois da instalação.</p>
-    <br><button onclick="goBack()">Voltar</button>
-  </section>
-
-<section id="aula5" class="analysis">
-    <h2>SO - Aula 5</h2>
-    <h3>Análise</h3>
-    <p> Nesta aula de Sistemas Operativos foi apresentado o TP3, que envolve temas mais avançados como a gestão de processos e permissões.
-        A sessão começou com uma explicação clara do que era esperado, e depois tivemos logo a oportunidade de começar a trabalhar, o que ajudou a perceber melhor o que tínhamos de fazer.</p>
-    <h3>Comentário</h3>
-    <p> No geral, a sessão correu bem. Foi positivo termos começado logo o trabalho, porque deu para esclarecer dúvidas na hora e avançar mais confiantes.
-        Esta forma de trabalhar facilita muito a aprendizagem, especialmente quando o conteúdo é mais técnico.</p>
-    <h3>Critica</h3>
-    <p>A aula foi bem organizada, mas talvez tivesse sido útil haver mais exemplos práticos durante a explicação, para entender melhor algumas partes mais complicadas.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula6" class="analysis">
-    <h2>SO - Aula 6</h2>
-    <h3>Análise</h3>
-    <p> Nesta aula tivemos tempo para terminar o TP3 e também para pôr os E-Portfolios em dia. O professor esteve disponível para ajudar, o que foi bom para esclarecer dúvidas.
-        Como alguns colegas estavam atrasados, foi útil termos este tempo para recuperar o que faltava.</p>
-    <h3>Comentário</h3>
-    <p> No geral, a aula foi bastante útil. Deu para organizar melhor o trabalho, terminar tarefas pendentes e tirar dúvidas.
-         Ter esse tempo sem pressão ajudou a avançar com mais calma e segurança, o que fez com que fosse uma sessão produtiva.</p>
-    <h3>Critica</h3>
-    <p>Foi uma aula bem aproveitada. Também podia ter havido uma pequena revisão dos pontos principais do TP3 ou do E-Portfolio, só para garantir que todos estavam no caminho certo.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula7" class="analysis">
-    <h2>SO - Aula 7</h2>
-    <h3>Análise</h3>
-    <p> Nesta sessão, o professor não conseguiu lecionar como habitualmente devido a questões de saúde, mas foi disponibilizado o Trabalho Prático 4, que abordava temas como processos, comandos Unix e comunicação entre processos.
-        A aula também foi aproveitada para finalizar trabalhos pendentes e atualizar os E-Portfolios, o que ajudou a organizar melhor o tempo.</p>
-    <h3>Comentário</h3>
-    <p>A aula foi bastante produtiva. Consegui adiantar o TP4 e organizar tarefas em atraso, o que me permitiu ficar em dia com o trabalho. Foi uma boa oportunidade para gerir melhor o tempo e concluir pendências.</p>
-    <h3>Critica</h3>
-    <p>Embora a parte teórica tenha ficado em falta devido à condição do professor, o tempo disponibilizado para o TP4 e para colocar os trabalhos em dia foi bem aproveitado.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula8" class="analysis">
-    <h2>SO - Aula 8</h2>
-    <h3>Falta</h3>
-    <p> Devido a ter que ir acompanhar a minha irmã a uma consulta devido à asma.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula9" class="analysis">
-    <h2>SO - Aula 9</h2>
-    <h3>Análise</h3>
-    <p>A aula centrou-se na apresentação SO_ISEC_3, com foco nos critérios de qualidade dos sistemas operativos e nos conceitos de ficheiros e sistemas de ficheiros.
-         Foram discutidos temas como desempenho, segurança, fiabilidade e a filosofia Unix "Everything is a File", o que ajudou a perceber como os SOs gerem os seus recursos de forma unificada.</p>
-    <h3>Comentário</h3>
-    <p>Foi uma aula muito útil para reforçar a base teórica dos sistemas operativos. Entender a importância da estrutura de ficheiros e os critérios de qualidade tornou mais claro como um SO funciona “por dentro”. A filosofia do Unix foi particularmente interessante</p>
-    <h3>Critica</h3>
-    <p>A explicação foi clara e bem organizada, com bons exemplos práticos. Os comandos e casos aplicados ajudaram a tornar os conceitos mais concretos. A única coisa que podia ter melhorado seria um pequeno exercício prático durante a aula, para aplicar logo o que foi visto.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula10" class="analysis">
-    <h2>SO - Aula 10</h2>
-    <h3>Análise</h3>
-    <p>A sessão 10 foi dividida em dois grandes temas: a organização lógica dos discos e sistemas de ficheiros e os conceitos relacionados com o funcionamento interno dos sistemas operativos. Foram abordadas estruturas como FAT e i-nodes, bem como os modos de funcionamento e os diferentes tipos de arquitetura de SO.</p>
-    <h3>Comentário</h3>
-    <p>Foi uma aula teórica mas muito importante para perceber como os sistemas operativos estão organizados internamente. Os temas foram bem explicados e ajudaram a formar uma visão mais completa do funcionamento de um SO, desde o arranque até à gestão de recursos.</p>
-    <h3>Critica</h3>
-    <p>A aula foi bastante rica em conteúdo e a sequência dos temas fez sentido, ligando bem os aspetos técnicos com a estrutura global do sistema. No entanto, pela densidade da matéria, talvez fosse útil um pequeno resumo visual ou esquema para ajudar a fixar melhor os diferentes modelos de arquitetura.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula11" class="analysis">
-    <h2>SO - Aula 11</h2>
-    <h3>Falta</h3>
-    <p>Faltei a aula.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula12" class="analysis">
-    <h2>SO - Aula 12</h2>
-    <h3>Análise</h3>
-    <p>A aula focou-se nos nomes de ficheiros e diretórios no Linux. Foram explicadas as regras de nomeação, incluindo o uso de letras, números e alguns caracteres especiais — com aviso para os que podem causar erros no terminal. Também foram apresentados comandos básicos como pwd (mostrar onde estamos), ls (listar ficheiros) e cd (mudar de diretório). Na parte prática, os alunos criaram diretórios com nomes mais complicados (com espaços e símbolos), usaram o autocompletar com TAB, e aprenderam a apagar diretórios.</p>
-    <h3>Comentário</h3>
-    <p>Foi uma aula prática e direta ao ponto. Aprendemos comandos essenciais e boas práticas que vão dar jeito tanto na escola como no trabalho. Usar o terminal já parece menos complicado depois desta sessão.</p>
-    <h3>Critica</h3>
-    <p>A aula foi bem estruturada e fácil de acompanhar. A explicação foi feita de forma clara e progressiva, o que ajudou muito quem está a dar os primeiros passos no terminal. Ter exemplos práticos logo a seguir à teoria fez diferença. Talvez tivesse sido ainda mais útil mostrar alguns erros comuns com nomes mal escolhidos, só para reforçar os cuidados a ter.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula13" class="analysis">
-    <h2>SO - Aula 13</h2>
-    <h3>Análise</h3>
-    <p>A aula focou-se em conteúdos importantes para a tarefa final, nomeadamente programação em C com ficheiros, diretórios e sinais. Foram explicadas funções como open() e write(), criação de processos com fork() e wait(), e o tratamento de sinais como o Ctrl+C. Também se simulou algoritmos de escalonamento como FCFS, SJF e Round Robin.</p>
-    <h3>Comentário</h3>
-    <p>Foi uma sessão muito útil, especialmente para reforçar a parte prática do C e preparar-nos melhor para a tarefa final. A aula aumentou a confiança para lidar com processos e sinais no desenvolvimento.</p>
-    <h3>Critica</h3>
-    <p>A explicação foi clara e os exemplos de código foram úteis para entender como aplicar cada conceito. A aula equilibrou bem teoria e prática.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula14" class="analysis">
-    <h2>SO - Aula 14</h2>
-    <h3>Análise</h3>
-    <p>Esta aula foi inteiramente dedicada ao desenvolvimento do Trabalho Final. Serviu como uma oportunidade adicional para avançar com o projeto, rever detalhes e esclarecer dúvidas com o professor.</p>
-    <h3>Comentário</h3>
-    <p>Foi uma aula produtiva, ideal para ajustar e finalizar aspetos do projeto antes da apresentação. O tempo extra foi bem aproveitado para consolidar o trabalho feito.</p>
-    <h3>Critica</h3>
-    <p>Ter mais tempo para trabalhar com acompanhamento direto foi útil.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula15" class="analysis">
-    <h2>SO - Aula 15</h2>
-    <h3>Análise</h3>
-    <p>A aula foi novamente dedicada ao desenvolvimento do Trabalho Final. No entanto, surgiu um contratempo técnico com a VirtualBox, que causou a perda de algumas alterações feitas nos scripts. Foi necessário reinstalar o sistema operativo, o que atrasou um pouco o progresso do trabalho. </p>
-    <h3>Comentário</h3>
-    <p>Mesmo com o imprevisto, a aula foi importante para resolver o problema e retomar o progresso do projeto. Foi um lembrete prático sobre a importância de prevenir falhas técnicas.</p>
-    <h3>Critica</h3>
-    <p>Apesar da aula estar bem orientada para o desenvolvimento, o problema com a VirtualBox revelou a importância de ter cópias de segurança frequentes </p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-<section id="aula16" class="analysis">
-    <h2>SO - Aula 16</h2>
-    <h3>Análise</h3>
-    <p>Esta aula foi dedicada à apresentação dos Trabalhos Finais. Cada grupo teve a oportunidade de mostrar o projeto desenvolvido, explicando as funcionalidades e o foco na acessibilidade. </p>
-    <h3>Comentário</h3>
-    <p>Foi um bom encerramento do projeto, onde foi possível ver o resultado do esforço coletivo e aprender com as soluções dos colegas. A diversidade de ideias demonstrou a criatividade e aplicabilidade dos conceitos aprendidos.</p>
-    <h3>Critica</h3>
-    <p>As apresentações permitiram ver abordagens diferentes ao mesmo desafio, o que foi enriquecedor.</p>
-    <br><button onclick="goBack()">Voltar</button>
-</section>
-
-
-
-</main>
-<!-- Contactos -->
-<footer id="contact">
-    <p><span style="font-weight:bold; color:#ffd966;">📧 Contacto:</span>
-        <a href="mailto:a2024125328@isec.pt">a2024125328@isec.pt</a>
-    </p>
-    <p>💾 &copy; Rodrigo Tomásio Portfolio</p>
-    <p>✨ Este portefólio foi inspirado no visual dos anos 90. 🖱️</p>
-</footer>
-<button id="backToTop" title="Voltar ao topo">⬆️</button>
-<script>
-const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', function() {
-  if (window.scrollY > 200) {
-    backToTop.style.display = 'block';
-  } else {
-    backToTop.style.display = 'none';
-  }
-});
-backToTop.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
-</script>
-<script>
-window.addEventListener('scroll', function() {
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrolled = (window.scrollY / docHeight) * 100;
-  document.getElementById('progressBar').style.width = scrolled + '%';
-});
-</script>
-
-
+        </section>
+    </main>
+    <footer id="contacto">
+        <p><strong>Contacto:</strong> <a href="mailto:teuemail@exemplo.pt">teuemail@exemplo.pt</a></p>
+        <p>&copy; [Teu Nome] - Portfólio [Ano]</p>
+    </footer>
+    <script>
+    document.getElementById('toggleTheme').onclick = function() {
+        document.body.classList.toggle('dark-mode');
+        this.textContent = document.body.classList.contains('dark-mode') ? '☀️ Modo Claro' : '🌑 Modo Escuro';
+    };
+    </script>
 </body>
-</html>
+ç
