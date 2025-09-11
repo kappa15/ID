@@ -2,37 +2,40 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Portfólio da Disciplina</title>
+    <title>Portfólio de Integração de Dados</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <button id="toggleTheme">🌑 Modo Escuro</button>
-    <header>
-        <h1>Portfólio de [Nome da Disciplina]</h1>
+    <aside class="sidebar">
+        <div class="avatar">
+            <img src="gato.jpg" alt="Foto do aluno">
+            <h2>[teu nome]</h2>
+            <p>[curso] <br> [instituto]</p>
+        </div>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#analises">Análises</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#sobre"><span>👤</span> Sobre Mim</a></li>
+                <li><a href="#analises"><span>📝</span> Análises</a></li>
+                <li><a href="#contacto"><span>📧</span> Contacto</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <div class="content">
-                <img src="gato.jpg" alt="Foto do aluno">
-                <p>Olá! Sou [teu nome], estudante de [curso] no [instituto]. Este portfólio reúne as análises e reflexões desenvolvidas na disciplina de [nome da disciplina].</p>
-            </div>
+        <button id="toggleTheme">🌑</button>
+    </aside>
+    <main class="glass">
+        <section id="sobre" class="card">
+            <h1>Portfólio de <span style="color:#00cfff;">Integração de Dados</span></h1>
+            <p>Bem-vindo ao meu portfólio! Aqui vais encontrar as minhas reflexões e análises sobre a disciplina de Integração de Dados.</p>
         </section>
         <section id="analises">
-            <h2>Análises</h2>
-            <div class="analysis">
-                <h3>Aula 1</h3>
+            <div class="card">
+                <h2>📝 Aula 1</h2>
+                <span class="data-aula">Data: 10/09/2025</span>
                 <p>Resumo e reflexão sobre a aula.</p>
             </div>
-            <div class="analysis">
-                <h3>Aula 2</h3>
+            <div class="card">
+                <h2>📝 Aula 2</h2>
+                <span class="data-aula">Data: 17/09/2025</span>
                 <p>Resumo e reflexão sobre a aula.</p>
             </div>
         </section>
@@ -41,11 +44,6 @@
         <p><strong>Contacto:</strong> <a href="mailto:teuemail@exemplo.pt">teuemail@exemplo.pt</a></p>
         <p>&copy; [Teu Nome] - Portfólio [Ano]</p>
     </footer>
-    <script>
-    document.getElementById('toggleTheme').onclick = function() {
-        document.body.classList.toggle('dark-mode');
-        this.textContent = document.body.classList.contains('dark-mode') ? '☀️ Modo Claro' : '🌑 Modo Escuro';
-    };
-    </script>
+    <div class="welcome" id="welcomeMsg">Bem-vindo ao portfólio! 👋</div>
 </body>
-ç
+</html>
