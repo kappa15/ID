@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!btn) return;
     btn.onclick = function() {
         document.body.classList.toggle('dark-mode');
-        btn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Modo Claro' : '🌑 Modo Escuro';
-        msg.textContent = document.body.classList.contains('dark-mode') ? 'Modo escuro ativado! 🌑' : 'Modo claro ativado! ☀️';
+        btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        msg.textContent = document.body.classList.contains('dark-mode') ? 'Modo escuro retro ativado! 🕹️' : 'Modo claro retro ativado! 🎮';
         msg.classList.add('show');
         setTimeout(() => {
-            msg.textContent = 'Bem-vindo ao portfólio! 👋';
+            msg.textContent = 'Bem-vindo ao portfólio! 👾';
             msg.classList.remove('show');
         }, 1800);
     };
