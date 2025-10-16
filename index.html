@@ -2,50 +2,220 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Portfólio - Integração de Dados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Retro | Integração de Dados</title>
+    <meta name="description" content="Portfólio retro de desenvolvedor web com estética anos 80/90">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <aside class="sidebar">
-        <div class="avatar">
-            <img src="gato.jpg" alt="Foto do aluno">
-            <h2>Rodrigo Tomásio</h2>
+    <!-- Hero Section -->
+    <section id="hero" class="section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="pixel-text neon-text flicker">&gt; PORTFÓLIO_RETRO.exe</h1>
+                <div class="divider"></div>
+                
+                <p class="cyan-text fade-in">$ Bem-vindo ao futuro do passado...</p>
+                <p class="pink-text fade-in">&gt; Rodrigo Tomásio</p>
+                <p class="normal-text fade-in">[ Integração • De • Dados ]</p>
+
+                <div class="button-group">
+                    <button class="retro-button neon-border" onclick="scrollToSection('projects')">Ver_Análises()</button>
+                    <button class="retro-button cyan-border" onclick="scrollToSection('contact')">Contato.send()</button>
+                </div>
+
+                <div class="arrow-down">▼</div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#analises"><span>📚</span> Análises</a></li>
-            </ul>
-        </nav>
-        <button id="toggleTheme">🌙</button>
-    </aside>
-    <main class="glass">
-        <section id="analises">
-            <div class="card minimized">
-                <button class="card-toggle" title="Maximizar/Minimizar">＋</button>
-                <h2>📚 Aula 1</h2>
-                <span class="data-aula">Data: 10/09/2025</span>
-                <p>Introdução à disciplina e primeiros conceitos de integração de dados.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title pink-text">&lt; SOBRE_MIM /&gt;</h2>
+            
+            <div class="card">
+                <p class="card-text">
+                    <span class="cyan-text pixel-small">&gt;</span> Moro na Praia de Mira, um lugar incrível onde o mar faz parte do meu dia a dia.
+                </p>
+                
+                <p class="card-text">
+                    <span class="pink-text pixel-small">&gt;</span> Estudo no ISEC e adoro praticar surf sempre que posso.
+                </p>
+                
+                <p class="card-text">
+                    <span class="neon-text pixel-small">&gt;</span> Tenho 21 anos e encontro na praia e nos estudos o equilíbrio perfeito entre lazer e futuro.
+                </p>
+
+                <div class="status-bar">
+                    <p class="pixel-small cyan-text">
+                        STATUS: <span class="neon-text flicker">[ONLINE]</span>
+                    </p>
+                </div>
             </div>
-            <div class="card minimized">
-                <button class="card-toggle" title="Maximizar/Minimizar">＋</button>
-                <h2>📚 Aula 2</h2>
-                <span class="data-aula">Data: 10/09/2025</span>
-                <p>Introdução à disciplina e primeiros conceitos de integração de dados.</p>
-            </div>
-            <div class="card minimized">
-                <button class="card-toggle" title="Maximizar/Minimizar">＋</button>
-                <h2>📚 Aula 3</h2>
-                <span class="data-aula">Data: 10/09/2025</span>
-                <p>Introdução à disciplina e primeiros conceitos de integração de dados.</p>
-            </div>
-        </section>
-    </main>
-    <footer id="contacto">
-        <div>
-            <p><strong>Contacto:</strong> <a href="mailto:a2024125328@isec.pt">a2024125328@isec.pt</a></p>
-            <p>&copy; Rodrigo Tomásio - Integração de Dados - 2025/2026</p>
         </div>
-    </footer>
+    </section>
+
+    <!-- Analysis Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title cyan-text">&lt; ANÁLISES /&gt;</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card neon-border">
+                    <h3 class="project-title neon-text">ANÁLISE_AULA_01</h3>
+                    <p class="project-description">Análise da primeira aula sobre fundamentos web</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-footer">
+                        <button class="link-button cyan-text" onclick="openModal('modal1')">[Ver_Mais &gt;&gt;]</button>
+                    </div>
+                </div>
+
+                <div class="project-card cyan-border">
+                    <h3 class="project-title cyan-text">ANÁLISE_AULA_02</h3>
+                    <p class="project-description">Análise da segunda aula sobre manipulação DOM</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">DOM</span>
+                        <span class="tech-tag">Eventos</span>
+                    </div>
+                    <div class="project-footer">
+                        <button class="link-button cyan-text" onclick="openModal('modal2')">[Ver_Mais &gt;&gt;]</button>
+                    </div>
+                </div>
+
+                <div class="project-card pink-border">
+                    <h3 class="project-title pink-text">ANÁLISE_AULA_03</h3>
+                    <p class="project-description">Análise da terceira aula sobre design responsivo</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Responsive</span>
+                        <span class="tech-tag">Media Queries</span>
+                    </div>
+                    <div class="project-footer">
+                        <button class="link-button cyan-text" onclick="openModal('modal3')">[Ver_Mais &gt;&gt;]</button>
+                    </div>
+                </div>
+
+                <div class="project-card neon-border">
+                    <h3 class="project-title neon-text">ANÁLISE_AULA_04</h3>
+                    <p class="project-description">Análise da primeira aula sobre fundamentos web</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-footer">
+                        <button class="link-button cyan-text" onclick="openModal('modal4')">[Ver_Mais &gt;&gt;]</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content neon-border">
+            <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
+            <h2 class="modal-title neon-text">ANÁLISE_AULA_01</h2>
+            <div class="modal-body">
+                <p class="cyan-text pixel-small">&gt; TEMA: Fundamentos do Desenvolvimento Web</p>
+                <br>
+                <p><span class="pink-text">&gt;</span> Nesta aula foram abordados os conceitos básicos de HTML5, incluindo estrutura semântica, tags essenciais e boas práticas de desenvolvimento.</p>
+                <br>
+                <p><span class="pink-text">&gt;</span> Aprendemos sobre a importância do CSS3 para estilização e como criar layouts modernos e responsivos.</p>
+                <br>
+                <p><span class="pink-text">&gt;</span> Introdução ao JavaScript e sua integração com HTML para criar páginas interativas.</p>
+                <br>
+                <p class="neon-text pixel-small">CONCLUSÃO: Base sólida para desenvolvimento web moderno.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content cyan-border">
+            <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
+            <h2 class="modal-title cyan-text">ANÁLISE_AULA_02</h2>
+            <div class="modal-body">
+                <p class="cyan-text pixel-small">&gt; TEMA: Manipulação do DOM com JavaScript</p>
+                <br>
+                <p><span class="pink-text">&gt;</span> Estudo aprofundado sobre o Document Object Model (DOM) e como manipular elementos HTML dinamicamente.</p>
+                <br>
+                <p><span class="pink-text">&gt;</span> Eventos JavaScript: click, hover, submit e como criar interações ricas com o usuário.</p>
+                <br>
+                <p><span class="pink-text">&gt;</span> Prática de seleção de elementos, modificação de conteúdo e criação dinâmica de componentes.</p>
+                <br>
+                <p class="neon-text pixel-small">CONCLUSÃO: Controle total sobre a interatividade da página.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content pink-border">
+            <span class="modal-close" onclick="closeModal('modal3')">&times;</span>
+            <h2 class="modal-title pink-text">ANÁLISE_AULA_03</h2>
+            <div class="modal-body">
+                <p class="cyan-text pixel-small">&gt; TEMA: Design Responsivo e Mobile First</p>
+                <br>
+                <p><span class="pink-text">&gt;</span> Técnicas avançadas de CSS3 para criar layouts que se adaptam a qualquer dispositivo.</p>
+                <br>
+                <p><span class="pink-text">&gt;</span> Media queries, flexbox e grid para construção de interfaces flexíveis e modernas.</p>
+                <br>
+                <p><span class="pink-text">&gt;</span> Boas práticas de design responsivo e otimização para diferentes resoluções.</p>
+                <br>
+                <p class="neon-text pixel-small">CONCLUSÃO: Websites acessíveis em qualquer plataforma.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title pink-text">&lt; CONTATO /&gt;</h2>
+            
+            <div class="card">
+                <p class="contact-intro">
+                    <span class="neon-text pixel-small">&gt;&gt;</span> Vamos criar algo incrível juntos!
+                </p>
+
+                <div class="contact-items">
+                    <div class="contact-item neon-border">
+                        <span class="contact-icon">✉</span>
+                        <div class="contact-info">
+                            <p class="contact-label pixel-small">Email</p>
+                            <p class="contact-value neon-text">a2024125328@isec.pt</p>
+                        </div>
+                        <span class="contact-link cyan-text pixel-small" style="cursor:pointer;" onclick="navigator.clipboard.writeText('a2024125328@isec.pt')">[COPIAR &gt;]</span>
+                    </div>
+
+                    <div class="contact-item cyan-border">
+                        <span class="contact-icon">⚡</span>
+                        <div class="contact-info">
+                            <p class="contact-label pixel-small">GitHub</p>
+                            <p class="contact-value cyan-text">kappa15</p>
+                        </div>
+                        <span class="contact-link cyan-text pixel-small" style="cursor:pointer;" onclick="navigator.clipboard.writeText('kappa15')">[COPIAR &gt;]</span>
+                    </div>
+
+                </div>
+
+                <div class="footer">
+                    <p class="pixel-small">
+                        © 2025 Rodrigo.dev | <span class="neon-text flicker">ONLINE</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
